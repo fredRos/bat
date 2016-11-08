@@ -64,7 +64,8 @@ public:
      * @return A 2D histogram of the smallest interval in Y for each bin in X containing the desired probability mass. */
     TH2* GetGraphicalErrorBandXY(double level = .68, int nsmooth = 0, bool overcoverage = true) const;
 
-    //* @return A const reference of the internal errorband histogram
+    /**
+     * @return A const reference of the internal error band histogram */
     const TH2& GetErrorBandXY()const
     {
         return fErrorBandXY;
@@ -102,36 +103,45 @@ public:
     /* @{ */
 
     /**
-     * Sets the error band flag to continuous function */
+     * Set the error band flag to continuous function */
     void SetErrorBandContinuous(bool flag);
 
     /**
-     *Extends the lower x Edge of th errorband by -extension */
+     * Extend the lower x edge of the error band by -extension.
+     *
+     * This can be used to cover cases in which the needed x or y range
+     * is higher than the default error band range.
+     * One example could be a calibration which has to be evaluated
+     * beyond the highest x point. */
     void SetErrorBandExtensionLowEdgeX(double extension)
     {
         fErrorBandExtensionLowEdgeX = extension;
     }
 
     /**
-     *Extends the lower x Edge of th errorband by +extension */
+     * Extend the upper x edge of the error band by +extension
+     * @see SetErrorBandExtensionLowEdgeX */
     void SetErrorBandExtensionUpEdgeX(double extension)
     {
         fErrorBandExtensionUpEdgeX = extension;
     }
 
     /**
-     *Extends the lower y Edge of th errorband by -extension */
+     * Extend the lower y edge of the error band by -extension
+     * @see SetErrorBandExtensionLowEdgeX */
     void SetErrorBandExtensionLowEdgeY(double extension)
     {
         fErrorBandExtensionLowEdgeY = extension;
     }
 
     /**
-     *Extends the lower y Edge of th errorband by +extension */
+     * Extend the upper y Edge of the error band by +extension
+     * @see SetErrorBandExtensionLowEdgeX */
     void SetErrorBandExtensionUpEdgeY(double extension)
     {
         fErrorBandExtensionUpEdgeY = extension;
     }
+
     /**
      * Turn on or off the filling of the error band during the MCMC run.
      * @param flag set to true for turning on the filling */
@@ -157,7 +167,7 @@ public:
     }
 
     /**
-     * Sets index of the y values in function fits.
+     * Set index of the y values in function fits.
      * @param index Index of the y values */
     void SetFitFunctionIndexY(int index)
     {
@@ -165,7 +175,7 @@ public:
     }
 
     /**
-     * Sets indices of the x and y values in function fits.
+     * Set indices of the x and y values in function fits.
      * @param indexx Index of the x values
      * @param indexy Index of the y values */
     void SetFitFunctionIndices(int indexx, int indexy)
@@ -175,7 +185,7 @@ public:
     }
 
     /**
-     * Sets the flag for integration. \n
+     * Set the flag for integration. \n
      * true: use ROOT's TF1::Integrate() \n
      * false: use linear interpolation */
     void SetFlagIntegration(bool flag)
@@ -184,7 +194,7 @@ public:
     };
 
     /**
-     * Defines a fit function.
+     * Define a fit function.
      * @param parameters A set of parameter values
      * @param x A vector of x-values
      * @return The value of the fit function at the x-values given a set of parameters */

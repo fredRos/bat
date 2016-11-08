@@ -103,7 +103,7 @@ void BCFitter::MarginalizePreprocess()
 
         dy = (GetDataSet()->GetRangeWidth(fFitFunctionIndexY)
               + fErrorBandExtensionLowEdgeY
-              + fErrorBandExtensionUpEdgeY)  / fErrorBandNbinsY;
+              + fErrorBandExtensionUpEdgeY) / fErrorBandNbinsY;
 
         double xRangeLow = GetDataSet()->GetLowerBound(fFitFunctionIndexX) - fErrorBandExtensionLowEdgeX - dx / 2;
         double xRangeHigh = GetDataSet()->GetUpperBound(fFitFunctionIndexX) + fErrorBandExtensionUpEdgeX + dx / 2;
@@ -125,7 +125,6 @@ void BCFitter::MarginalizePreprocess()
             for (unsigned iy = 1; iy <= fErrorBandNbinsX; ++iy)
                 fErrorBandXY.SetBinContent(ix, iy, 0.);
     }
-
 }
 
 // ---------------------------------------------------------
