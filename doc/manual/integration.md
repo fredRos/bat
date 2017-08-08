@@ -54,8 +54,6 @@ m.SetMarginalizationMethod(method);
 
 where `method` is an `enum` in  `BCIntegrate::BCMarginalizationMethod`
 
-@todo links to ref guide don't work
-
 `method`  | Details
 ------------- | -------------
 `kMargMetropolis`  | Metropolis algorithm; see @ref cha-mcmc.
