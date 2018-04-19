@@ -17,8 +17,8 @@ all: doxy
 include $(top_srcdir)/doc/Makefile-common.am
 
 # don't rerun doxygen if file exists. `all` always does that
-bat-ref.tag:
+$(TAGFILE):
 	$(MAKE) doxy
 
 clean-local:
-	-rm -rf html/ bat-ref.tag doxygen_sqlite3.db
+	-rm -rf html/ $(TAGFILE) doxygen_sqlite3.db
