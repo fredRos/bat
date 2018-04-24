@@ -4,7 +4,7 @@
 # $input
 
 # override with a local mathjax installation through environment variable
-MATHJAX_RELPATH ?= "http://cdn.mathjax.org/mathjax/latest"
+MATHJAX_RELPATH ?= "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js"
 
 define doxyconf
 	PROJECT_NUMBER = @VERSION@
