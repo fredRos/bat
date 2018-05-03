@@ -13,8 +13,7 @@ input = \
 		factorized-prior.md \
 		sharing-samples.md \
 		threading.md \
-		validation.md \
-		troubleshooting.md
+		validation.md
 
 doxyinput = $(srcdir)/front.md
 doxyinput += $(top_srcdir)/INSTALL.md
