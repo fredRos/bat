@@ -28,7 +28,7 @@ statistical models, and advanced features.
 
 Please visit our [home page][BAThome] for an overview of papers,
 research, and other activities related to BAT. The code development
-takes place [github][BATgithub].
+takes place over at [github][BATgithub].
 
 This document is meant to is quickly enable to you to find your way
 around BAT. We describe the common workflow and explain how to solve
@@ -36,15 +36,14 @@ some not-so-common tasks. To keep the size of this document
 manageable, we refer to the [html reference guide](../../ref-guide/html/index.html) in which
 all classes, methods etc. are documented.
 
-If you run into a problem with BAT, the preferred method is to create
-a new issue on [github][BATgithub]. This allows other users to easily
-find your issue online and benefit from the solution. If you provide
-some code for us to reproduce the problem, we can help you much
-faster.
+If you run into a problem with BAT, the preferred method is to create a new
+issue on [github](https://github.com/bat/bat/issues). This allows other users to
+easily find your issue online and benefit from the solution. If you provide some
+code for us to reproduce the problem, we can help you much faster. Have a look
+at issues with the label `troubleshooting` or `question`.
 
-For general questions or comments that do not belong into the public
-in the form of issues, you can contact the developers at
-bat@mpp.mpg.de.
+For general questions or comments that do not belong into the public in the form
+of issues, you can contact the developers at bat@mpp.mpg.de.
 
 [BAThome]: http://mpp.mpg.de/bat "BAT homepage"
 [BATgithub]: https://github.com/bat/bat "BAT github"
