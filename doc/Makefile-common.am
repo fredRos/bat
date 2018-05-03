@@ -3,8 +3,9 @@
 # to be compatible with out-of-source build through the variable
 # $input
 
-# override with a local mathjax installation through environment variable
-MATHJAX_RELPATH ?= "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js"
+# override with a local mathjax installation to work offline. For example
+# `make doxy MATHJAX_RELPATH=/usr/share/javascript/mathjax`
+MATHJAX_RELPATH ?= "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML"
 
 define doxyconf
 	PROJECT_NUMBER = @VERSION@
