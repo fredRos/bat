@@ -1,4 +1,4 @@
-Installation instructions
+Installation instructions {#cha-install}
 =========================
 
 This document provides a short description of how to compile and use
